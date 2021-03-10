@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: blanchedalmond;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+    height: 300px;
+    background-color: rgb(6, 3, 49);
+    border-radius: 10px;
+}
+
+.poto {
+    width: 20px;
+    height: 350px;
+    background: rgb(6, 3, 49);
+}
+
+.base {
+    width: 150px;
+    height: 35px;
+    background: rgb(100, 100, 100);
+}
+
+.circles {
+    position: relative;
+    border-radius: 50px;
+    background-color: white;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+.circles:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: green;
+    top: -1px;
+    left: -1px;
+    border: 2px solid green;
+    z-index: 10;
+    transition: 1s;
+    border-radius: 50px;
+    opacity: 1;
+    animation: oops 15s linear infinite;
+}
+
+@keyframes oops {
+    0% {
+        opacity: 0;
+    }
+    0.1% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    30.1% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.circles:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: orange;
+    top: -1px;
+    left: -1px;
+    border: 2px solid orange;
+    z-index: 10;
+    transition: 1s;
+    border-radius: 50px;
+    opacity: 1;
+    animation: oops2 15s linear infinite;
+}
+
+@keyframes oops2 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    30.1% {
+        opacity: 1;
+    }
+    59.9% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.circles:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    top: -1px;
+    left: -1px;
+    border: 2px solid red;
+    z-index: 10;
+    transition: 1s;
+    border-radius: 50px;
+    opacity: 1;
+    animation: oops3 15s linear infinite;
+}
+
+@keyframes oops3 {
+    0% {
+        opacity: 0;
+    }
+    59.9% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
